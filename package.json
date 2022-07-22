@@ -1,0 +1,31 @@
+{
+  "name": "kgl_project",
+  "version": "1.0.0",
+  "description": "Record keeping software for KGL company",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marthaalinda/KGL_software.git"
+  },
+  "author": "alinda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marthaalinda/KGL_software/issues"
+  },
+  "homepage": "https://github.com/marthaalinda/KGL_software#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mongodb": "^4.8.0",
+    "mongoose": "^6.4.6",
+    "nodemon": "^2.0.19",
+    "passport-local-mongoose": "^7.1.2",
+    "pug": "^3.0.2"
+  }
+}

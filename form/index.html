@@ -18,12 +18,13 @@
   <div class="container">
     <h1>VENDOR REGISTRATION</h1>
     <form name="registration" class="registration-form" onsubmit="return formValidation()">
-      <table>
+      
+    <table>
         <tr>
             <td><label for="name">Name of the buyer:</label></td>
             <td><input type="text" name="name" id="name" placeholder="your name" class="form-control"></td>
         </tr>
-        
+      
         <tr>
             <td><label for="name">Sales agent name:</label></td>
             <td><input type="text" name="name" id="name" placeholder="your name" class="form-control"></td>
@@ -49,9 +50,9 @@
             Other: <input type="radio" name="gender" value="other"></td>
         </tr>
         <tr>
-          <td><label for="language">Type of produce</label></td>
+          <td><label for="produceName">Type of produce</label></td>
           <td>
-            <select name="language" id="language">
+            <select name="produceName" id="produceName">
               <option value="">Select type of produce</option>
               <option value="English">Beans</option>
               <option value="Spanish">cow peas</option>
@@ -68,15 +69,16 @@
 
         <tr>
             <td><label for="nationalId">National ID:</label></td>
-            <td><input type="number" name="nationalId id="nationalId" class="form-control"></td>
+            <td><input type="text" name="nationalId id="nationalId" class="form-control"></td>
           </tr>
           <tr>
             <td><label for="dispatch">Date of dispatch:</label></td>
             <td><input type="date" name="Date of dispatch" id="dispatch" class="form-control"></td>
           </tr>
-
-
-
+          <tr>
+            <td><label for="dispatch"> Location:</label></td>
+            <td><input type="text" name="Location" id="location\" class="form-control"></td>
+          </tr>
           <tr>
             <td><label for="dispatch">Due date:</label></td>
             <td><input type="date" name="dueDate" id="dueDate" class="form-control"></td>
