@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/login/login.css" />
+    <title>Login into KGL </title>
+</head>
+<body>
+    <div class="container">
+      <div class="card-body">
+        <!-- logo section-->
+        <div class="app-brand justify-content-center">
+          <a href="index.html" class="app-brand-link gap-2">
+            <span class="app-brand-logo"><img src="/church-2-0/img/logo.png" alt="" width="40"/></span>
+            <span class="app-brand-text demo text-body fw-bolder">Karibu Groceries Limited</span>
+          </a>
+        </div>
+        <h4 class="mb-2"> Welcome to KGL record-keeping software!</h4>
+        <p class="mb-4">Please login to your respective branch to start your journey</p>
+        <!-- register Section-->
+        <form id="formAuthentication" class="mb-3">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email-username" placeholder="Enter your email address">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3 form-password-between">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="..............">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1"> I have read, understood and agree to the terms and conditions</label>
+          </div>
+          <button type="submit" class="btn btn-primary d-grid w-100">Login</button>
+        </form>
+      </div>
+        
+    </div>
+    
+</body>
+</html>

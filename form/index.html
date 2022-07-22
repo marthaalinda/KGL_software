@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>REG FORM</title>
+
+    <!--Css file-->
+    <link type="text/css" rel="stylesheet" href="./style.css">
+
+</head>
+
+
+<body>
+  <div class="container">
+    <h1>VENDOR REGISTRATION</h1>
+    <form name="registration" class="registration-form" onsubmit="return formValidation()">
+      <table>
+        <tr>
+            <td><label for="name">Name of the buyer:</label></td>
+            <td><input type="text" name="name" id="name" placeholder="your name" class="form-control"></td>
+        </tr>
+        
+        <tr>
+            <td><label for="name">Sales agent name:</label></td>
+            <td><input type="text" name="name" id="name" placeholder="your name" class="form-control"></td>
+         </tr>
+        
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="text" name="email" id="email" placeholder="your email" class="form-control"></td>
+        </tr>
+        
+        <tr>
+          <td><label for="phoneNumber">Phone Number:</label></td>
+          <td><input type="number" name="phoneNumber" id="phoneNumber"class="form-control"></td>
+        </tr>
+        <tr>
+          <td><label for="amountdue">Amount due:</label></td>
+          <td><input type="number" name="phoneNumber" id="phoneNumber"class="form-control"></td>
+        </tr>
+        <tr>
+          <td><label for="gender">Gender:</label></td>
+          <td>Male: <input type="radio" name="gender" value="male">
+            Female: <input type="radio" name="gender" value="female">
+            Other: <input type="radio" name="gender" value="other"></td>
+        </tr>
+        <tr>
+          <td><label for="language">Type of produce</label></td>
+          <td>
+            <select name="language" id="language">
+              <option value="">Select type of produce</option>
+              <option value="English">Beans</option>
+              <option value="Spanish">cow peas</option>
+              <option value="Hindi">Grain Maize</option>
+              <option value="Arabic">G.nuts</option>
+              <option value="Russian">Soybeans</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="tonnage">Tonnage</label></td>
+          <td><input type="number" name="tonnage" id="tonnage" class="form-control"></td>
+        </tr>
+
+        <tr>
+            <td><label for="nationalId">National ID:</label></td>
+            <td><input type="number" name="nationalId id="nationalId" class="form-control"></td>
+          </tr>
+          <tr>
+            <td><label for="dispatch">Date of dispatch:</label></td>
+            <td><input type="date" name="Date of dispatch" id="dispatch" class="form-control"></td>
+          </tr>
+
+
+
+          <tr>
+            <td><label for="dispatch">Due date:</label></td>
+            <td><input type="date" name="dueDate" id="dueDate" class="form-control"></td>
+          </tr>
+        <tr>
+          <td colspan="2"><input type="submit" class="submit" value="Register" /></td>
+        </tr>
+      </table>
+    </form>
+
+    <script src="./market.js"></script>
+
+  </div>
+</body>
+</html>
