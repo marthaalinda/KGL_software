@@ -25,10 +25,10 @@ function formValidation() {
     email.focus();
     return false;
   }
-  // checking password
+  // checking tonnage
   if (!password.value.match(/^.{5,15}$/)) {
     alert("Password length must be between 5-15 characters!");
-    password.focus();
+    tonnage.focus();
     return false;
   }
   // checking phone number
