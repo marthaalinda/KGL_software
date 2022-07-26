@@ -1,0 +1,49 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')
+  link(rel='stylesheet' href='/css/login.css')
+  title Login into KGL 
+.container
+  .card-body
+    // logo section
+    .app-brand.justify-content-center
+      a.app-brand-link.gap-2(href='index.html')
+        span.app-brand-logo
+          img(src='/church-2-0/img/logo.png' alt='' width='40')
+        span.app-brand-text.demo.text-body.fw-bolder Karibu Groceries Limited
+    h4.mb-2  Welcome to KGL record-keeping software!
+    // register Section
+    form#formAuthentication.mb-3
+      .mb-3
+        label.form-label(for='exampleInputEmail1') Name of the buyer
+        input#buyerName.form-control(type='text' name='buyerName' placeholder='Enter in your full name')
+      .mb-3
+        .mb-3
+          label.form-label(for='exampleInputEmail1') Name of the sales agent
+          input#salesagentName.form-control(type='text' name='salesagentName' placeholder='Enter in your name of the sales agent')
+        .mb-3
+          label.form-label(for='exampleInputEmail1') Date
+          input#email.form-control(type='date' name='email-username' placeholder='Enter the date')
+        .mb-3
+          label.form-label(for='exampleInputPassword1') Name of the produce
+          select#produce.form-control(name='produce')
+            option Select type of produce
+            option Beans
+            option cow peas
+            option Grain Maize
+            option G.nuts
+            option Soybeans
+        .mb-3
+          label.form-label(for='exampleInputPassword1')  Select name of Branch
+          select#branch.form-control(name='branch')
+            option Select name of Branch
+            option Mukono
+            option Kasangati
+        .mb-3.form-check
+          input#exampleCheck1.form-check-input(type='checkbox')
+          label.form-check-label(for='exampleCheck1')  I have read, understood and agree to the terms and conditions
+        button.btn.btn-primary.d-grid.w-100(type='submit') Submit
