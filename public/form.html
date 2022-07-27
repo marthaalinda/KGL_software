@@ -9,12 +9,36 @@
     <title>REG FORM</title>
 
     <!--Css file-->
-    <link type="text/css" rel="stylesheet" href="./style.css">
+    <link type="text/css" rel="stylesheet" href="/public/css/style.css">
 
 </head>
 
 
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/church-2-0/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/public/form.html">Form page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/public/login.html">Login page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/public/sales.html" tabindex="-1" aria-disabled="true">Sales</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <div class="container">
     <h1>VENDOR REGISTRATION</h1>
     <form name="registration" class="registration-form" onsubmit="return formValidation()">
