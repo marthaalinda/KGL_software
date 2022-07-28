@@ -34,33 +34,33 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
         span.app-brand-text.demo.text-body.fw-bolder Karibu Groceries Limited
     h4.mb-2  Welcome to KGL record-keeping software!
     // register Section
-    form#formAuthentication.mb-3(name= "Registration" action="/sales" method="POST")
+    form#formAuthentication.mb-3(method="POST" name= "Registration" action="/salesreport/edit?id="+sale._id)
       .mb-3
         label.form-label(for='exampleInputEmail1') Name of the buyer
-        input#buyerName.form-control(type='text' name='buyerName' placeholder='Enter in your full name')
+        input#buyerName.form-control(type='text' name='buyerName' value=sale.buyerName)
       .mb-3
         .mb-3
           label.form-label(for='exampleInputEmail1') Name of the sales agent
-          input#salesagentName.form-control(type='text' name='salesagentNamee' placeholder='Enter in your name of the sales agent')
+          input#salesagentName.form-control(type='text' name='salesagentNamee' value=sale.salesagentNamee)
         .mb-3
           label.form-label(for='exampleInputEmail1') Date
-          input#email.form-control(type='date' name='date' placeholder='Enter the date')
+          input#email.form-control(type='date' name='date' value=sale.date)
         .mb-3
           label.form-label(for='exampleInputPassword1') Name of the produce
-          select#produce.form-control(name='produce')
-            option(value="default") Select type of produce 
-            option(value="Beans")  Beans
-            option(value="cowpeas")  cow peas
-            option(value="maize")  Grain Maize
-            option(value="nuts")  G.nuts
-            option(value="soybeans")  Soybeans
+          select#produce.form-control(name='produce' )
+            option Select type of produce 
+            option(value="Beans" selected=sale.produce==="Beans")  Beans
+            option(value="cowpeas" selected=sale.produce==="cowpeas")  cow peas
+            option(value="maize" selected=sale.produce==="maize")  Grain Maize
+            option(value="nuts" selected=sale.produce==="nuts")  G.nuts
+            option(value="soybeans" selected=sale.produce==="soybeans")  Soybeans
         .mb-3
           label.form-label(for='exampleInputPassword1')  Select name of Branch
           select#branch.form-control(name='branch')
-            option(value="Default") Select name of Branch
-            option(value="mukono") Mukono
-            option(value="kasangati") Kasangati
-        .mb-3.form-check
-          input#exampleCheck1.form-check-input(type='checkbox')
-          label.form-check-label(for='exampleCheck1')  I have read, understood and agree to the terms and conditions
+            option Select name of Branch
+            option(value="mukono" selected=sale.branch==="mukono") Mukono
+            option(value="kasangati" selected=sale.branch==="kasangati") Kasangati
+        //- .mb-3.form-check
+        //-   input#exampleCheck1.form-check-input(type='checkbox')
+        //-   label.form-check-label(for='exampleCheck1')  I have read, understood and agree to the terms and conditions
         button.btn.btn-primary.d-grid.w-100(type='submit') Submit

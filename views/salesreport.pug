@@ -5,7 +5,7 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
   script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')
-  link(rel='stylesheet' href='/css/login.css')
+  link(rel='stylesheet' href='/public/css/login.css')
   title Login into KGL 
 nav.navbar.navbar-expand-lg.navbar-light.bg-light
   .container-fluid
@@ -32,18 +32,36 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
         span.app-brand-logo
           img(src='/church-2-0/img/logo.png' alt='' width='40')
         span.app-brand-text.demo.text-body.fw-bolder Karibu Groceries Limited
-    h4.mb-2  Welcome to KGL record-keeping software!
-    p.mb-4 Please login to your respective branch to start your journey
+    h4.mb-2  Sales report for KGL 
+    table#table.table.table-bordered.table-hover.table-secondary
+      thead
+        tr
+            th
+            | Buyer Name
+            th
+            | Seller's Name
+            th
+            | Date
+            th
+            | Produce
+            th
+            | Branch
+      tbody 
+      if sales.length 
+        each sale in sales
+            tr
+                td #{sale.buyerName}
+                td #{sale.salesagentNamee}
+                td #{sale.date}
+                td #{sale.produce}
+                td #{sale.branch} 
+                td 
+                    form(action="/salesreport/edit/"+sale._id)
+                        input(type="hidden")
+                        button(type="submit") edit
+                td 
+                    form.delete(action="/salesreport/delete" method="post")
+                        input(type="hidden", placeholder="", name="id", value=sale._id)
+                        button(type="submit") delete
+                    
     // register Section
-    form#formAuthentication.mb-3
-      .mb-3
-        label.form-label(for='exampleInputEmail1') Email address
-        input#email.form-control(type='email' name='email-username' placeholder='Enter your email address')
-        #emailHelp.form-text We&apos;ll never share your email with anyone else.
-      .mb-3.form-password-between
-        label.form-label(for='exampleInputPassword1') Password
-        input#exampleInputPassword1.form-control(type='password' placeholder='..............')
-      .mb-3.form-check
-        input#exampleCheck1.form-check-input(type='checkbox')
-        label.form-check-label(for='exampleCheck1')  I have read, understood and agree to the terms and conditions
-      button.btn.btn-primary.d-grid.w-100(type='submit') Login

@@ -1,5 +1,5 @@
 const express = require('express');
- // Product = require('../models/Product');
+const  Sale = require('../models/Sale');
 
 const router = express.Router();
 
@@ -24,62 +24,61 @@ router.get('/login', (req, res) => {
   });
 });
 
-// router.post('/', async (req, res) => {
-//   try {
-//     const product = new Product(req.body);
-//     await product.save();
-//     res.redirect('products/productlist');
-//     // console.log(req.body);
-//   } catch (err) {
-//     res.status(400).render('pdtsales');
-//   }
-// });
 
-// router.get('/productlist', async (req, res) => {
-//   try {
-//     const pdtDetails = await Product.find();
-//     res.render('pdtlist', { products: pdtDetails, title: 'Product Details' });
-//   } catch (err) {
-//     console.log(err);
-//     res.send('Failed to retrieve Product Details.');
-//   }
-// });
+router.post('/sales', async (req, res) => {
+  try {
+    const sales = new Sale(req.body);
+    await sales.save();
+    res.redirect('/salesreport');
+     console.log(req.body);
+  } catch (err) {
+    res.status(400).render('sales');
+  }
+});
 
-// router.post('/delete', async (req, res) => {
-//   try {
-//     await Product.deleteOne({ _id: req.body.id });
-//     res.redirect('back');
-//   } catch (error) {
-//     res.status(400).send('Unable to delete item in the database');
-//   }
-// });
+router.get('/salesreport', async (req, res) => {
+  try {
+    const sales = await Sale.find();
+    res.render('salesreport', { sales: sales });
+  } catch (err) {
+    console.log(err);
+    res.send('Failed to retrieve sales Details.');
+  }
+});
 
-// router.get('/edit/:id', (req, res) => {
-//   Product.findById(req.params.id, (err, product) => {
-//     res.render('editproduct', {
-//       title: '',
-//       product: product,
-//     });
-//   });
-// });
+router.post('/salesreport/delete', async (req, res) => {
+  try {
+    await Sale.deleteOne({ _id: req.body.id });
+    res.redirect('back');
+  } catch (error) {
+    res.status(400).send('Unable to delete item in the database');
+  }
+});
 
-// router.post('/edit/:id', (req, res) => {
-//   let product = {};
-//   product.pdtname = req.body.pdtname;
-//   product.price = req.body.price;
+router.get('/salesreport/edit/:id', async (req, res)=>{
+  
+  try
+    {
+    const sale = await Sale.findOne({ _id:req.params.id});
+    res.render('salesedit', {sale:sale});
+    } 
+  catch (err) {
+    res.status(400).send("Unable to delete item in the database");
+  }  
+  //res.render ("login")
+ 
+});
 
-//   let query = { _id: req.params.id };
-
-//   Product.updateOne(query, product, (err) => {
-//     if (err) {
-//       console.error(err);
-//       return;
-//     } else {
-//       req.flash('success', 'Product updated!!');
-//       res.redirect('/');
-//     }
-//   });
-// });
+router.post('/salesreport/edit', async (req, res)=>{
+  try{
+     await Sale.findOneAndUpdate({ _id:req.query.id},req.body);
+    res.redirect("/salesreport");
+    } 
+  catch (err) {
+    res.status(400).send("Unable to update item in the database");
+  }   
+ 
+});
 
 // router.get('/editproduct', (req, res)=> {
 //   res.render('editproduct')
