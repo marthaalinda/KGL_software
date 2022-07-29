@@ -1,0 +1,90 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')
+  link(rel='stylesheet' href='/public/css/login.css')
+  title Login into KGL 
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  .container-fluid
+    a.navbar-brand(href='#') Navbar
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='/index') Home
+        li.nav-item
+          a.nav-link(href='/form') Form page
+        li.nav-item
+          a.nav-link(href='/formreport') Form Report
+        li.nav-item
+          a.nav-link(href='/login') Login page
+        li.nav-item
+          a.nav-link(href='/sales') Sales
+        li.nav-item
+          a.nav-link(href='/salesreport') Sales Report
+.container
+  .card-body
+    // logo section
+    .app-brand.justify-content-center
+      a.app-brand-link.gap-2(href='index.html')
+        span.app-brand-logo
+          img(src='/church-2-0/img/logo.png' alt='' width='40')
+        span.app-brand-text.demo.text-body.fw-bolder Karibu Groceries Limited
+    h4.mb-2  Form report for KGL 
+    table#table.table.table-bordered.table-hover.table-secondary
+      thead
+        tr
+            th
+            | Buyer Name
+            th
+            | Sale Agent Name
+            th
+            | Email
+            th
+            | Contacts
+            th
+            | Amount due
+            th
+            | Gender
+            th
+            | Produce
+            th
+            | Tonnage
+            th
+            | National ID
+            th
+            | Date of Dispatch
+            th
+            | Location 
+            th
+            | Due Date
+      tbody 
+      if form.length 
+        each newform in form
+            tr
+                td #{newform.buyername}
+                td #{newform.salesagentNamee}
+                td #{newform.email}
+                td #{newform.phoneNumber}
+                td #{newform.amountdue} 
+                td #{newform.gender}
+                td #{newform.produceName}
+                td #{newform.tonnage}
+                td #{newform.nationalId}
+                td #{newform.dispatch}
+                td #{newform.location}
+                td #{newform.dueDate}
+                td 
+                    form(action="/formreport/edit/"+newform._id)
+                        input(type="hidden")
+                        button(type="submit") edit
+                td 
+                    form.delete(action="/formreport/delete" method="post")
+                        input(type="hidden", placeholder="", name="id", value=newform._id)
+                        button(type="submit") delete
+                    
+    // register Section

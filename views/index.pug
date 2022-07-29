@@ -1,181 +1,182 @@
 doctype html
-html
-  head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    title Karibu Groceries Ltd
-    meta(name='description', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(name='robots', content='all,follow')
-    // Google fonts
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap')
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Playfair+Display:500i&display=swap')
-    // Swiper slider
-    link(rel='stylesheet', href='vendor/swiper/swiper-bundle.min.css')
-    // theme stylesheet
-    link#theme-stylesheet(rel='stylesheet', href='/css/style.default.css')
-    // Custom stylesheet - for your changes
-    link(rel='stylesheet', href='/css/custom.css')
-    // Favicon
-    link(rel='shortcut icon', href='/img/favicon.png')
-    script(src='https://kit.fontawesome.com/dade5d41b4.js', crossorigin='anonymous')
-  body.scrollspy-example(data-bs-spy='scroll', data-bs-target='#navbar', data-bs-offset='0', tabindex='0')
-    // navbar
-    header.header
-      nav#navbar.navbar.navbar-expand-lg.navbar-dark.position-absolute.w-100
-        .container
-          a.navbar-brand.d-block.d-lg-none(href='#!')
-            img(src='/img/logo.png', alt='...', width='60')
-          button.navbar-toggler.navbar-toggler-end(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-            span
-            span
-            span
-          #navbarSupportedContent.collapse.navbar-collapse
-            ul.navbar-nav.ms-auto
-              li.nav-item
-                a.nav-link(href='#hero') Home 
-              li.nav-item
-                a.nav-link(href='#services') Services
-            ul.navbar-nav.d-none.d-lg-block.px-4
-              li.nav-item.m-0
-                a.navbar-brand.m-0(href='#!')
-                  img(src='/img/logo.png', alt='...', width='80')
-            ul.navbar-nav.me-auto
-              li.nav-item
-                a.nav-link(href='#contact') Contact
-    // Hero Slider
-    section#hero.text-center.pt-lg-0.hero-home
-      .swiper.hero-slider
-        .swiper-wrapper
-          .swiper-slide.hero-slide.bg-cover.py-5.with-border-image.d-flex.align-items-center(style='background: url(/img/cereal.jpg)')
-            .container.text-white.py-5.my-5.index-forward
-              h1.text-uppercase.text-xl.mt-5  Karibu groceries ltd
-              .row
-                .col-lg-7.mx-auto
-                  p.lead
-                    | Karibu groceries LTD is a wholesale produce distributor dealing in cereals with 2 Branches in
-                    | different locations. KGL has two farms both in Matugga and in Maganjo.
-          .swiper-slide.hero-slide.bg-cover.py-5.with-border-image.d-flex.align-items-center(style='background: url(/img/wheat.jpg)')
-            .container.text-white.py-5.my-5.index-forward
-              h1.text-uppercase.text-xl.mt-5 Karibu groceries ltd
-              .row
-                .col-lg-7.mx-auto
-                  p.lead
-                    | KGL deals in Beans, Grain Maize, Cow peas, G-nuts, Soybeans. It gets it&apos;s produce from individual dealers with produce not less than a tone (1000kg), other companies that are willing to sell to KGL, and it&apos;s own farms.
-          .swiper-slide.hero-slide.bg-cover.py-5.with-border-image.d-flex.align-items-center(style='background: url(/img/cow\ peas.jpg)')
-            .container.text-white.py-5.my-5.index-forward
-              h1.text-uppercase.text-xl.mt-5 Karibu groceries ltd
-              .row
-                .col-lg-7.mx-auto
-                  p.lead
-                    | The KGL app is built to ease records keeping through this software database. It accessisble mainly by the KGL staff at each branch to input the respective data.
-        .swiper-button-next.swiper-nav-custom.d-none.d-lg-block
-        .swiper-button-prev.swiper-nav-custom.d-none.d-lg-block
-        .swiper-pagination.py-3.d-block.d-lg-none
-    // Features Section
-    section#features
-      .container-fluid.p-0
-        .row.p-0.text-center.align-items-stretch.g-0
-          .col-lg-4.col-md-6
-            .p-5.text-white.h-100.bg-primary
-              h3.h4 Our Staff 
-              p.mb-0.text-small Each branch of KGL has a manager and two attendants
-          .col-lg-4.col-md-6
-            .p-5.text-white.h-100.bg-primary-shade
-              h3.h4  Mission 
-              p.mb-0.text-small Provide quality and trusted food for consumers
-          .col-lg-4.col-md-6.order-lg-6
-            .p-5.text-white.h-100.bg-primary
-              h3.h4 Produce sold on payment
-              p.mb-0.text-small Interested parties are given the opportunity to produce on credit.
-    // Services Section
-    section#services.py-5
-      .container.py-5
-        header.mb-4.text-center.mb-5
-          h2.text-uppercase Our services
-        .row.text-center.gy-4
-          .col-lg-4
-            i.fa-brands.fa-wpforms
-            h3.h5 Deferred payment
-            p.text-muted
-              | Buyers are offered a chance to take produce on credit. You are required to fill a form with biodata and produce information
-            a.btn.btn-primary.px-4(href='/form/index.html') Sign up
-          .col-lg-4
-            i.fas.text-primary.mb-4.fa-3x.fa-bible
-            h3.h5 Produce procurement records
-            p.text-muted Only accessisble by the manager. 
-            |  
-            a.btn.btn-primary.px-4(href='/login/login.html') Launch records
-          .col-lg-4
-            i.fas.text-primary.mb-4.fa-3x.fa-praying-hands
-            h3.h5 Produce selling records
-            p.text-muted Only accessisble by the sales agent
-            a.btn.btn-primary.px-4(href='/login/login.html') Launch records
-    // Clients Section
-    // Scroll Top Button
-    a.scroll-top(href='#')
-      i.fas.fa-long-arrow-alt-up
-    footer.pt-5.text-white(style='background: #111')
-      .container.pt-5
-        .row.mb-5.pb-5
-          .col-md-2.col-sm-12
-            img.mb-3(src='/img/logo.png', alt='...', width='140')
-          .col-md-6.col-sm-12
-            h5.mb-4.mt-3 Where to find us
-            ul.list-unstyled
-              li.mb-2
-                a.reset-anchor(href='tel:+0035478968')
-                  i.text-primary.me-3.fas.fa-phone
-                  span +256 734 5678 99
-              li.mb-2
-                a.reset-anchor(href='text.html')
-                  i.text-primary.me-3.fas.fa-globe-americas
-                  span 433, Matugga ,KLA 10016
-              li.mb-2
-                a.reset-anchor(href='mailto:church@example.com')
-                  i.text-primary.me-3.far.fa-envelope
-                  span karibugroceries@ug.com
-          .col-md-4.col-sm-12
-            h5.mb-4.mt-3 Newsletter
-            p.text-small.text-muted
-              | Subscribe to the KGL website and stay updated  with the latest changes on the different farms.Get to book a tour around the farms either for leisure or research
-            .input-group
-              input.form-control.border-dark.text-white.rounded-0.bg-none(type='search', placeholder='Enter your email address', aria-label='email address', aria-describedby='button-addon2')
-              button#button-addon2.btn.btn-primary.px-4(type='submit')
-                i.fas.fa-paper-plane
-        .py-4.border-top.border-dark.text-center
-          p.mb-0.text-muted
-            | Template designed by 
-            a.reset-anchor.text-primary(href='https://bootstrapious.com/p/cathedral-bootstrap-church-charity-template') Bootstrap Temple
-            | .
-          // If you want to remove the backlink, please purchase the Attribution-Free License. See details in readme.txt or license.txt. Thanks!
-    // JavaScript files
-    script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
-    script(src='vendor/swiper/swiper-bundle.min.js')
-    script(src='js/countdown.js')
-    script(src='vendor/progressbar.js/progressbar.js')
-    script(src='js/front.js')
-    script.
-      // ------------------------------------------------------- //
-      //   Inject SVG Sprite -
-      //   see more here
-      //   https://css-tricks.com/ajaxing-svg-sprite/
-      // ------------------------------------------------------ //
-      function injectSvgSprite(path) {
-      var ajax = new XMLHttpRequest();
-      ajax.open("GET", path, true);
-      ajax.send();
-      ajax.onload = function(e) {
-      var div = document.createElement("div");
-      div.className = 'd-none';
-      div.innerHTML = ajax.responseText;
-      document.body.insertBefore(div, document.body.childNodes[0]);
-      }
-      }
-      // this is set to BootstrapTemple website as you cannot
-      // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
-      // while using file:// protocol
-      // pls don't forget to change to your domain :)
-      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
-    // FontAwesome CSS - loading as last, so it doesn't block rendering
-    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.1/css/all.css', integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr', crossorigin='anonymous')
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  title Karibu Groceries Ltd
+  meta(name='description' content='')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  meta(name='robots' content='all,follow')
+  // Google fonts
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap')
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Playfair+Display:500i&display=swap')
+  // Swiper slider
+  link(rel='stylesheet' href='vendor/swiper/swiper-bundle.min.css')
+  // theme stylesheet
+  link#theme-stylesheet(rel='stylesheet' href='css/style.default.css')
+  // Custom stylesheet - for your changes
+  link(rel='stylesheet' href='css/custom.css')
+  // Favicon
+  link(rel='shortcut icon' href='img/favicon.png')
+  script(src='https://kit.fontawesome.com/dade5d41b4.js' crossorigin='anonymous')
+// navbar
+header.header
+  nav#navbar.navbar.navbar-expand-lg.navbar-dark.position-absolute.w-100
+    .container
+      a.navbar-brand.d-block.d-lg-none(href='#!')
+        img(src='/public/img/logo.png' alt='...' width='60')
+      button.navbar-toggler.navbar-toggler-end(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span
+        span
+        span
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.ms-auto
+          
+        ul.navbar-nav.me-auto
+          li.nav-item
+            a.nav-link(href='#hero') Home 
+          li.nav-item
+            a.nav-link(href='#services') Services
+          li.nav-item
+            a.nav-link(href='#contact') Contact
+          ul.navbar-nav.d-none.d-lg-block.px-4
+          li.nav-item.m-0
+            a.navbar-brand.m-0(href='#!')
+              img(src='/img/logo.png' alt='...' width='80')
+          li.nav-item
+            a.nav-link(href='#contact') Login
+          li.nav-item
+            a.nav-link(href='#contact') Sales Report
+          li.nav-item
+            a.nav-link(href='#contact') Form
+// Hero Slider
+section#hero.text-center.pt-lg-0.hero-home
+  .swiper.hero-slider
+    .swiper-wrapper
+      .swiper-slide.hero-slide.bg-cover.py-5.with-border-image.d-flex.align-items-center(style='background: url(/img/cereal.jpg)')
+        .container.text-white.py-5.my-5.index-forward
+          h1.text-uppercase.text-xl.mt-5  Karibu groceries ltd
+          .row
+            .col-lg-7.mx-auto
+              p.lead
+                | Karibu groceries LTD is a wholesale produce distributor dealing in cereals with 2 Branches in
+                | different locations. KGL has two farms both in Mukono and in Kasangati.
+      .swiper-slide.hero-slide.bg-cover.py-5.with-border-image.d-flex.align-items-center(style='background: url(/img/wheat.jpg)')
+        .container.text-white.py-5.my-5.index-forward
+          h1.text-uppercase.text-xl.mt-5 Karibu groceries ltd
+          .row
+            .col-lg-7.mx-auto
+              p.lead
+                | KGL deals in Beans, Grain Maize, Cow peas, G-nuts, Soybeans. It gets it&apos;s produce from individual dealers with produce not less than a tone (1000kg), other companies that are willing to sell to KGL, and it&apos;s own farms.
+      .swiper-slide.hero-slide.bg-cover.py-5.with-border-image.d-flex.align-items-center(style='background: url(/img/peas.jpg)')
+        .container.text-white.py-5.my-5.index-forward
+          h1.text-uppercase.text-xl.mt-5 Karibu groceries ltd
+          .row
+            .col-lg-7.mx-auto
+              p.lead
+                | The KGL app is built to ease records keeping through this software database. It accessisble mainly by the KGL staff at each branch to input the respective data.
+    .swiper-button-next.swiper-nav-custom.d-none.d-lg-block
+    .swiper-button-prev.swiper-nav-custom.d-none.d-lg-block
+    .swiper-pagination.py-3.d-block.d-lg-none
+// Features Section
+section#features
+  .container-fluid.p-0
+    .row.p-0.text-center.align-items-stretch.g-0
+      .col-lg-4.col-md-6
+        .p-5.text-white.h-100.bg-primary
+          h3.h4 Our Staff 
+          p.mb-0.text-small Each branch of KGL has a manager and two attendants
+      .col-lg-4.col-md-6
+        .p-5.text-white.h-100.bg-primary-shade
+          h3.h4  Mission 
+          p.mb-0.text-small Provide quality and trusted food for consumers
+      .col-lg-4.col-md-6.order-lg-6
+        .p-5.text-white.h-100.bg-primary
+          h3.h4 Produce sold on payment
+          p.mb-0.text-small Interested parties are given the opportunity to produce on credit.
+// Services Section
+section#services.py-5
+  .container.py-5
+    header.mb-4.text-center.mb-5
+      h2.text-uppercase Our services
+    .row.text-center.gy-4
+      .col-lg-4
+        h3.h5 Deferred payment
+        p.text-muted
+          | Buyers are offered a chance to take produce on credit. You are required to fill a form with biodata and produce information
+        a.btn.btn-primary.px-4(href='/public/form.html') Sign up
+      .col-lg-4
+        h3.h5 Produce procurement records
+        p.text-muted Only accessisble by the manager. 
+        a.btn.btn-primary.px-4(href='/public/login.html') Launch records
+      .col-lg-4
+        h3.h5 Produce selling records
+        p.text-muted Only accessisble by the sales agent
+        a.btn.btn-primary.px-4(href='/public/login.html') Launch records
+// Clients Section
+// Scroll Top Button
+a.scroll-top(href='#')
+  i.fas.fa-long-arrow-alt-up
+footer.pt-5.text-white(style='background: #111')
+  .container.pt-5
+    .row.mb-5.pb-5
+      .col-md-2.col-sm-12
+        img.mb-3(src='/img/logo.png' alt='...' width='140')
+      .col-md-6.col-sm-12
+        h5.mb-4.mt-3 Where to find us
+        ul.list-unstyled
+          li.mb-2
+            a.reset-anchor(href='tel:+0035478968')
+              i.text-primary.me-3.fas.fa-phone
+              span +256 734 5678 99
+          li.mb-2
+            a.reset-anchor(href='text.html')
+              i.text-primary.me-3.fas.fa-globe-americas
+              span 433, Matugga ,KLA 10016
+          li.mb-2
+            a.reset-anchor(href='mailto:church@example.com')
+              i.text-primary.me-3.far.fa-envelope
+              span karibugroceries@ug.com
+      .col-md-4.col-sm-12
+        h5.mb-4.mt-3 Newsletter
+        p.text-small.text-muted
+          | Subscribe to the KGL website and stay updated  with the latest changes on the different farms.Get to book a tour around the farms either for leisure or research
+        .input-group
+          input.form-control.border-dark.text-white.rounded-0.bg-none(type='search' placeholder='Enter your email address' aria-label='email address' aria-describedby='button-addon2')
+          button#button-addon2.btn.btn-primary.px-4(type='submit')
+            i.fas.fa-paper-plane
+    .py-4.border-top.border-dark.text-center
+      p.mb-0.text-muted
+        | Designed by 
+        a.reset-anchor.text-primary(href='https://github.com/marthaalinda')  Martha Alinda
+        | .
+      // If you want to remove the backlink, please purchase the Attribution-Free License. See details in readme.txt or license.txt. Thanks!
+// JavaScript files
+script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
+script(src='vendor/swiper/swiper-bundle.min.js')
+script(src='js/countdown.js')
+script(src='vendor/progressbar.js/progressbar.js')
+script(src='js/front.js')
+script.
+  // ------------------------------------------------------- //
+  //   Inject SVG Sprite -
+  //   see more here
+  //   https://css-tricks.com/ajaxing-svg-sprite/
+  // ------------------------------------------------------ //
+  function injectSvgSprite(path) {
+  var ajax = new XMLHttpRequest();
+  ajax.open("GET", path, true);
+  ajax.send();
+  ajax.onload = function(e) {
+  var div = document.createElement("div");
+  div.className = 'd-none';
+  div.innerHTML = ajax.responseText;
+  document.body.insertBefore(div, document.body.childNodes[0]);
+  }
+  }
+  // this is set to BootstrapTemple website as you cannot
+  // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+  // while using file:// protocol
+  // pls don't forget to change to your domain :)
+  injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
+// FontAwesome CSS - loading as last, so it doesn't block rendering
+link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.1/css/all.css' integrity='sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr' crossorigin='anonymous')

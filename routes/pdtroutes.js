@@ -80,6 +80,15 @@ router.post('/salesreport/edit', async (req, res)=>{
  
 });
 
+router.get('/formreport', async (req, res) => {
+  try {
+    const sales = await Sale.find();
+    res.render('formreport', { form: form });
+  } catch (err) {
+    console.log(err);
+    res.send('Failed to retrieve Form Details.');
+  }
+});
 // router.get('/editproduct', (req, res)=> {
 //   res.render('editproduct')
 // }) 

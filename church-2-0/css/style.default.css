@@ -12257,7 +12257,7 @@ a.text-hover-dark:focus, a.text-hover-dark:hover {
 */
 .swiper-nav-custom {
   width: 3.5rem;
-  height: 3.5rem;
+  /*height: 3.5rem;*/
   background: rgba(0, 0, 0, 0.5) !important;
   line-height: 3.3rem !important;
   transition: all 0.3s;
