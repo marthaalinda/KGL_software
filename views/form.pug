@@ -26,7 +26,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
           a.nav-link(href='/salesreport') Sales Report
 .container
   h1 VENDOR REGISTRATION
-  form.registration-form(name='registration' onsubmit='return formValidation()')
+  form.registration-form(name='registration' action="/form" method="POST" onsubmit='return formValidation()')
     table
       tr
         td

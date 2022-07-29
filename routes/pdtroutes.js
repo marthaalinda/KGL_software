@@ -1,5 +1,6 @@
 const express = require('express');
 const  Sale = require('../models/Sale');
+const Form = require('../models/Form');
 
 const router = express.Router();
 
@@ -82,7 +83,7 @@ router.post('/salesreport/edit', async (req, res)=>{
 
 router.get('/formreport', async (req, res) => {
   try {
-    const sales = await Sale.find();
+    const form = await Form.find();
     res.render('formreport', { form: form });
   } catch (err) {
     console.log(err);
