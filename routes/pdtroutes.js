@@ -105,4 +105,37 @@ router.get('/formreport', async (req, res) => {
 //   res.render('editproduct')
 // }) 
 
+router.post('/formreport/delete', async (req, res) => {
+  try {
+    await Form.deleteOne({ _id: req.body.id });
+    res.redirect('back');
+  } catch (error) {
+    res.status(400).send('Unable to delete item in the database');
+  }
+});
+
+router.get('/formreport/edit/:id', async (req, res)=>{
+  
+  try
+    {
+    const newform = await Form.findOne({ _id:req.params.id});
+    res.render('formedit', {newform:newform});
+    } 
+  catch (err) {
+    res.status(400).send("Unable to delete item in the database");
+  }  
+  //res.render ("login")
+ 
+});
+
+router.post('/formreport/edit', async (req, res)=>{
+  try{
+     await Form.findOneAndUpdate({ _id:req.query.id},req.body);
+    res.redirect("/formreport");
+    } 
+  catch (err) {
+    res.status(400).send("Unable to update item in the database");
+  }   
+ 
+});
 module.exports = router;

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose'),
   newformSchema = new mongoose.Schema({
-    pdtname: {
+    buyerName: {
       type: String,
       trim: true,
     },
