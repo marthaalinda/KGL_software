@@ -81,6 +81,17 @@ router.post('/salesreport/edit', async (req, res)=>{
  
 });
 
+router.post('/form', async (req, res) => {
+  try {
+    const form = new Form(req.body);
+    await form.save();
+    res.redirect('/formreport');
+     console.log(req.body);
+  } catch (err) {
+    res.status(400).render('form');
+  }
+});
+
 router.get('/formreport', async (req, res) => {
   try {
     const form = await Form.find();
